@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Meal Plan Calendar"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Calendar View -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="2" />
+
+    <!-- Container for displaying selected date -->
+    <TextView
+        android:id="@+id/selectedDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp"
+        android:text="Selected Date: "
+        android:textSize="20sp" />
+
+    <!-- Buttons for adding meals to the selected date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <!-- Button to add breakfast -->
+        <Button
+            android:id="@+id/addBreakfastButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="Breakfast" />
+
+        <!-- Button to add lunch -->
+        <Button
+            android:id="@+id/addLunchButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="Lunch" />
+
+        <!-- Button to add dinner -->
+        <Button
+            android:id="@+id/addDinnerButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:layout_weight="1"
+            android:text="Dinner" />
+    </LinearLayout>
+
+    <!-- TextView for displaying the meal summary for the selected date -->
+    <TextView
+        android:id="@+id/mealSummaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:padding="10dp"
+        android:text="No meals planned for the selected date"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+
+    <!-- New buttons for saving and clearing the meal plan -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!-- Save Meal Plan Button -->
+        <Button
+            android:id="@+id/saveMealPlanButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="Save Meal Plan"
+            android:textColor="@android:color/white" />
+
+        <!-- Clear Meal Plan Button -->
+        <Button
+            android:id="@+id/clearMealPlanButton"
+            android:layout_width="10dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Clear Meal Plan"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+</LinearLayout>

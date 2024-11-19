@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/addRecipeButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFieldLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="Recipe name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- New Description Field -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionFieldLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/instructionsInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:maxLines="6" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Container for dynamically added ingredient input fields -->
+            <LinearLayout
+                android:id="@+id/ingredientsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical" />
+
+            <!-- Buttons to add/remove ingredient input fields -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addIngredientButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.75"
+                    android:text="Add ingredient"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:textSize="16sp"
+                    app:icon="@drawable/add" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/removeIngredientButton"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="0.75"
+                    android:backgroundTint="@android:color/holo_red_dark"
+                    android:text="Remove"
+                    android:textSize="16sp"
+                    app:icon="@drawable/remove" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Button aligned at the bottom -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addRecipeButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Add a Recipe"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>
