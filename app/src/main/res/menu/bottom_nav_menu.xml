@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+    android:id="@+id/plan"
+    android:icon="@drawable/calendar_month_40px"
+    android:title="Plan Meal"/>
+    <item
+    android:id="@+id/addRecipe"
+    android:icon="@drawable/library_add_40px"
+    android:title="Add Recipe"/>
+    <item
+    android:id="@+id/addIngredient"
+    android:icon="@drawable/grocery_40px"
+    android:title="Add Ingredient"/>
+    <item
+    android:id="@+id/shoppingList"
+    android:icon="@drawable/shopping_cart_40px"
+    android:title="Shopping List"/>
+    <item
+    android:id="@+id/measurements"
+    android:icon="@drawable/shopping_cart_40px"
+    android:title="Measurements"/>
+</menu>

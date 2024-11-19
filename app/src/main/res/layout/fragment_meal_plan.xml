@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Calendar View -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="2" />
+
+    <!-- Container for displaying selected date -->
+    <TextView
+        android:id="@+id/selectedDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="0dp"
+        android:textStyle="bold"
+        android:text="Selected Date: "
+        android:textSize="20sp" />
+
+    <!-- Buttons for adding meals to the selected date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:layout_margin="5dp">
+
+        <!-- Button to add breakfast -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addBreakfastButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:backgroundTint="@color/white"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/breakfast_dining_40px"
+            android:layout_marginHorizontal="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addLunchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ramen_dining_40px"
+            android:layout_marginHorizontal="15dp"
+            app:backgroundTint="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addDinnerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            app:backgroundTint="@color/design_default_color_background"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/brunch_dining_40px"
+            android:layout_marginHorizontal="15dp"/>
+
+    </LinearLayout>
+
+    <!-- TextView for displaying the meal summary for the selected date -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mealRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp" />
+
+    <!-- Podsumowanie odżywcze -->
+    <TextView
+        android:id="@+id/nutritionalSummaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Nutritions:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Wartości kaloryczne -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="10dp">
+
+        <EditText
+            android:id="@+id/totalCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kcal"
+            android:textSize="16sp"
+            android:layout_marginRight="25dp"/>
+
+        <EditText
+            android:id="@+id/totalProtein"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Protein"
+            android:textSize="16sp"
+            android:layout_marginRight="25dp"/>
+
+        <EditText
+            android:id="@+id/totalCarbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Carb"
+            android:textSize="16sp"
+            android:layout_marginRight="25dp"/>
+
+        <EditText
+            android:id="@+id/totalFats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fat"
+            android:textSize="16sp"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_width="65dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="+"
+            android:layout_marginLeft="30dp"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
